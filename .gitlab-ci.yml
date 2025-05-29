@@ -19,7 +19,7 @@ cache:
 
 deploy:
         stage: deploy
-        script: npm run dev -- --host
+        script: npm install; npm run dev -- --host
 
 test:
   stage: test
