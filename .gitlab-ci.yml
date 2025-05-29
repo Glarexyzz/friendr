@@ -17,9 +17,15 @@ cache:
   paths:
     - node_modules/
 
+      #deploy:
+      # stage: deploy
+      # script: npm install; npm run dev -- --host
+
 deploy:
         stage: deploy
-        script: npm install; npm run dev -- --host
+        script:
+                - npm install
+                - tsuru app deploy --app drp57 target ./Procfile
 
 test:
   stage: test
