@@ -1,3 +1,9 @@
+stages:
+  - test
+  - deploy
+  - deploy-remote
+
+
 cache:
   paths:
     - node_modules/
