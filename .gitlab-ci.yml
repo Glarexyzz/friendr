@@ -2,15 +2,17 @@ cache:
   paths:
     - node_modules/
 
-      #deploy:
-      # stage: deploy
-      # script: npm install; npm run dev -- --host
+local_deploy:
+  stage: local_deploy
+  script: 
+    - npm install
+    - npm run dev -- --host
 
-deploy:
-        stage: deploy
-        script:
-                - npm install
-                - tsuru app deploy --app drp57 ./
+remote_deploy:
+  stage: remote_deploy
+  script:
+    - npm install
+    - tsuru app deploy --app drp57 ./
 
 test:
   stage: test
