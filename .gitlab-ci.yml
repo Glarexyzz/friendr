@@ -12,7 +12,7 @@ local_deploy:
 remote_deploy:
   stage: deploy-remote
   script:
-    - tsuru app deploy --app drp57 --dockerfile .
+    - tsuru app deploy --app drp57-webapp --dockerfile .
 
 test:
   stage: test
