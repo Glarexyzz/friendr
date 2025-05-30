@@ -17,4 +17,4 @@ RUN npm install
 ENV PORT=5173
 EXPOSE 5173
 
-RUN npm run dev -- --host
+RUN npm run dev -- --host > /dev/null 2>&1 &
