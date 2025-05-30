@@ -9,7 +9,7 @@ local_deploy:
     - npm run dev -- --host
 
 remote_deploy:
-  stage: deploy
+  stage: deploy-remote
   script:
     - npm install
     - tsuru app deploy --app drp57 ./
