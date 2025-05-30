@@ -3,11 +3,6 @@ stages:
   - deploy
   - deploy-remote
 
-
-cache:
-  paths:
-    - node_modules/
-
 local_deploy:
   stage: deploy
   script: 
