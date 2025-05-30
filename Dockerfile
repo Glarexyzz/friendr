@@ -13,8 +13,8 @@ COPY package.json .
 COPY vite.config.js .
 
 RUN npm install
+
 ENV PORT=5173
-
-ENTRYPOINT ["npm", "run", "dev", "--", "--host"]
-
 EXPOSE 5173
+
+RUN npm run dev -- --host
