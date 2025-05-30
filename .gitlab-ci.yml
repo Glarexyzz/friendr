@@ -12,7 +12,7 @@ local_deploy:
   stage: deploy
   script: 
     - npm install
-    - npm run dev -- --host
+    - npm run dev -- --host > /dev/null 2>&1 &
 
 remote_deploy:
   stage: deploy-remote
