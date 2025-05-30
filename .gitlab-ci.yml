@@ -13,7 +13,7 @@ remote_deploy:
   stage: deploy-remote
   script:
     - npm install
-    - tsuru app deploy --app drp57 --dockerfile
+    - tsuru app deploy --app drp57 --dockerfile .
 
 test:
   stage: test
