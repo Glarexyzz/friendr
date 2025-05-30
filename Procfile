@@ -1,2 +1,2 @@
-web: npm run dev -- --host
+web: npm install; npm run dev -- --host
 
