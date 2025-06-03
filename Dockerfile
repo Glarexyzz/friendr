@@ -12,11 +12,13 @@ COPY public/ public/
 COPY package.json .
 COPY vite.config.js .
 COPY index.html .
+COPY app.js .
 
 RUN npm install
+RUN npm run build
 
-ENV PORT=5173
+ENV PORT=8080
 
-ENTRYPOINT ["npm", "run", "dev", "--", "--host"]
+ENTRYPOINT ["node", "app.js"]
 
-EXPOSE 5173
+EXPOSE 8080
