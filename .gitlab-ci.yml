@@ -1,16 +1,9 @@
 stages:
   - test
   - deploy
-  - deploy-remote
 
-local_deploy:
+deploy:
   stage: deploy
-  script: 
-    - npm install
-    - npm run dev -- --host > /dev/null 2>&1 &
-
-remote_deploy:
-  stage: deploy-remote
   script:
     - tsuru app deploy --app drp57-webapp --dockerfile .
 
