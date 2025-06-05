@@ -16,6 +16,11 @@ body {
   margin-left: 12px;
 }
 
+.profile {
+  height: 7vh;
+  margin-left: 75vw;
+}
+
 #nav-title {
   margin: 0 0 0 20px;
   font-size: 48px;
