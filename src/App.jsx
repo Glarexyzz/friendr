@@ -6,12 +6,10 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
+      <div id="navigation">
           <img src={logo} className="logo" alt="logo" />
+          <h1 id="nav-title">frendr</h1>
       </div>
-      <h1>Frendr</h1>
-    </>
   )
 }
 
