@@ -1,19 +1,18 @@
-import { useState } from 'react'
-import logo from './assets/logo.png'
-import profile from './assets/profile.svg'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css'
+import Navigation from './components/Navigation'
+import Dashboard from './pages/Dashboard'
+import Profile from './pages/Profile'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-      <div id="navigation">
-          <img src={logo} className="logo" alt="logo" />
-          <h1 id="nav-title">frendr</h1>
-          <a href="profile.html">
-            <img src={profile} className="profile" />
-          </a>
-      </div>
+    <Router>
+      <Navigation/>
+      <Routes>
+       <Route exact path='/' Component={Dashboard} />
+       <Route exact path='/profile' Component={Profile} />
+      </Routes>
+    </Router>
   )
 }
 
