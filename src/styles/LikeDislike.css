@@ -1,0 +1,86 @@
+/* Like/Dislike Buttons settings */
+.like-btn, .dislike-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  padding: 0;
+  position: relative; /* using relative positioning */
+}
+
+
+.like-btn {
+  right: -30px;
+}
+
+.dislike-btn {
+  left: -30px;
+}
+
+.icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+/* Initial state */
+.like-btn .icon-img,
+.dislike-btn .icon-img {
+  filter: invert(92%) sepia(14%) saturate(462%) hue-rotate(312deg) brightness(106%) contrast(101%);
+}
+
+/* Hover effects */
+.like-btn:hover .icon-img {
+  transform: scale(1.2);
+  filter: invert(92%) sepia(14%) saturate(462%) hue-rotate(312deg) brightness(106%) contrast(101%) 
+          drop-shadow(0 0 8px rgba(255, 222, 222, 0.7));
+}
+
+.dislike-btn:hover .icon-img {
+  transform: scale(1.2);
+  filter: invert(92%) sepia(14%) saturate(462%) hue-rotate(312deg) brightness(106%) contrast(101%) 
+          drop-shadow(0 0 8px rgba(255, 222, 222, 0.7));
+}
+
+/* Liked state (green) */
+.like-btn.liked {
+  background-color: #4CAF50;
+}
+
+.like-btn.liked .icon-img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(104%) contrast(101%);
+}
+
+/* Disliked state (red) */
+.dislike-btn.disliked {
+  background-color: #ff4d4d;
+}
+
+.dislike-btn.disliked .icon-img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(104%) contrast(101%);
+}
+
+/* animation effects */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.like-btn.liked .icon-img, 
+.dislike-btn.disliked .icon-img {
+  animation: pulse 0.5s ease;
+}
+
+/* Button background transitions */
+.like-btn, .dislike-btn {
+  transition: background-color 0.3s ease;
+}

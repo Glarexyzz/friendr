@@ -1,0 +1,33 @@
+/* Dashboard settings */
+.dashboard-container {
+  height: calc(100vh - 60px); /* Adjusting navbar height */
+  display: flex;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* Take all available space */
+}
+
+.find-friend-btn {
+  padding: 15px 40px; 
+  font-size: 20px; 
+  background-color: rgb(255, 222, 222); /* title color */
+  color: rgb(26, 26, 26); /* Dark text matching navbar background */
+  border: none;
+  border-radius: 30px; /* More rounded */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Matching navbar font */
+  font-weight: 500;
+  letter-spacing: 1px; 
+}
+
+.find-friend-btn:hover {
+  background-color: rgb(255, 200, 200); /* Slightly darker pink when hovered */
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
