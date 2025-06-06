@@ -4,9 +4,11 @@ import profile from '../assets/profile.svg'
 function Navigation() {
   return (
     <div id="navigation">
-      <img src={logo} className="logo" alt="logo" />
+      <a href="/">
+        <img src={logo} className="logo" alt="logo" />
+      </a>
       <h1 id="nav-title">frendr</h1>
-      <a href="profile.html">
+      <a href="/profile">
         <img src={profile} className="profile" />
       </a>
     </div>
