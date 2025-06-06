@@ -5,6 +5,7 @@ import Navigation from './components/Navigation'
 import Dashboard from './pages/Dashboard'
 import Profile from './pages/Profile'
 import AndyProfile from './pages/AndyProfile' 
+import Register from './Register';
 
 function App() {
   return (
