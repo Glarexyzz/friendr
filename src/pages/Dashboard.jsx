@@ -1,3 +1,4 @@
+import '../styles/dashboard.css';
 import { useNavigate } from 'react-router-dom'; 
 
 function Dashboard() {
@@ -7,7 +8,7 @@ function Dashboard() {
   const handleFindFriend = () => {
     navigate('/andy'); 
   };
-  
+
   // Find friend button
   return (
     <div className="dashboard-container">

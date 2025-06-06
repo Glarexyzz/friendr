@@ -2,6 +2,8 @@ import { useState } from 'react';
 import profileIcon from '../assets/profile.svg';   // Import profile icon
 import heartIcon from '../assets/heart.png';       // Import heart icon
 import dislikeIcon from '../assets/dislike.png';   // Import dislike icon
+import '../styles/AndyProfile.css';
+import '../styles/LikeDislike.css';
 
 function AndyProfile() {
   const [liked, setLiked] = useState(false);

@@ -1,4 +1,6 @@
-import './profile.css'
+import "../styles/CurrentProfile.css";
+
+
 
 function Profile() {
   return (
