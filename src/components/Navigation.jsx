@@ -1,16 +1,17 @@
+import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import profile from '../assets/profile.svg'
 
 function Navigation() {
   return (
     <div id="navigation">
-      <a href="/">
+      <Link to="/">
         <img src={logo} className="logo" alt="logo" />
-      </a>
+      </Link>
       <h1 id="nav-title">frendr</h1>
-      <a href="/profile">
+      <Link to="/profile">
         <img src={profile} className="profile" />
-      </a>
+      </Link>
     </div>
   );
 }
