@@ -8,6 +8,7 @@ RUN apt-get update
 RUN mkdir src
 RUN mkdir public
 COPY src/ src/
+COPY src/styles/ src/styles/
 COPY package.json .
 COPY vite.config.js .
 COPY index.html .
