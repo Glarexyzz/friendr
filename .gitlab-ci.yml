@@ -6,6 +6,8 @@ deploy:
   stage: deploy
   script:
     - tsuru app deploy --app drp57-webapp --dockerfile .
+  only:
+    - master
 
 test:
   stage: test
