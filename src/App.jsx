@@ -4,7 +4,8 @@ import './styles/App.css';
 import Navigation from './components/Navigation'
 import Dashboard from './pages/Dashboard'
 import Profile from './pages/Profile'
-import AndyProfile from './pages/AndyProfile' 
+import AndyProfile from './pages/AndyProfile'
+import Finder from './pages/Finder'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' element={<Dashboard />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/andy' element={<AndyProfile />} /> 
+        <Route path='/finder' element={<Finder />} />
       </Routes>
     </Router>
   )

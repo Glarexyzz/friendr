@@ -6,7 +6,7 @@ function Dashboard() {
   const navigate = useNavigate(); 
 
   const handleFindFriend = () => {
-    navigate('/andy'); 
+    navigate('/finder'); 
   };
 
   // Find friend button
@@ -17,7 +17,7 @@ function Dashboard() {
           className="find-friend-btn" 
           onClick={handleFindFriend}
         >
-          Find Friend
+          Make a Connection
         </button>
       </div>
     </div>
