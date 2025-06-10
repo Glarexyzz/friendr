@@ -1,6 +1,7 @@
 const data = {
   "city": ["London", "Oxford", "Truro", "Cambridge", "Liverpool"],
   "university": ["Imperial", "UCL", "Oxford", "Cambridge", "Warwick"],
+  "hobby": ["Climbing", "Painting", "Gymnastics", "Tennis", "Drawing"]
 };
 
 function Selector({ type }) {
