@@ -6,6 +6,8 @@ import Dashboard from './pages/Dashboard'
 import Profile from './pages/Profile'
 import AndyProfile from './pages/AndyProfile'
 import Finder from './pages/Finder'
+import AndyProfile from './pages/AndyProfile' 
+import Register from './Register';
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
         <Route path='/profile' element={<Profile />} />
         <Route path='/andy' element={<AndyProfile />} /> 
         <Route path='/finder' element={<Finder />} />
+        <Route path='register' element={Register }/>
       </Routes>
     </Router>
   )
