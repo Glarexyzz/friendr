@@ -103,16 +103,40 @@ const people = [
 
 function Finder() {
   const [results, updateResults] = useState(people);
+  const [cityFilter, updateCity] = useState("none");
+  const [uniFilter, updateUni] = useState("none");
+  const [hobbyFilter, updateHobby] = useState("none");
+
+  function updateFilters() {
+    const city = document.getElementById("city").value;
+    const university = document.getElementById("university").value;
+    const hobby = document.getElementById("hobby").value;
+
+    const filtered = [];
+
+    for (let person of people) {
+      const cityMatch = person[1] === city || city === "none";
+      const uniMatch = person[2] === university || university === "none";
+      const hobbyMatch = person[3].includes(hobby) || hobby === "none";
+
+      if (cityMatch && uniMatch && hobbyMatch) filtered.push(person);
+    }
+    updateCity(city);
+    updateUni(university);
+    updateHobby(hobby);
+    updateResults(filtered);
+    
+  }
 
   return (
     <div id="finder-root">
       <h2>Potential Connections</h2>
       <div id="filters">
         <p>Filters:</p>
-        <Selector type="city" id="city" />
-        <Selector type="university" id="university" />
-        <Selector type="hobby" id="hobby" />
-        <button>Search</button>
+        <Selector type="city" id="city" value={cityFilter}/>
+        <Selector type="university" id="university" value={uniFilter}/>
+        <Selector type="hobby" id="hobby" value={hobbyFilter}/>
+        <button onClick={updateFilters}>Search</button>
       </div>
       <div id="results">
         {results.map(r => <ProfileCard name={r[0]} hobbies={r[3]} city={r[1]} university={r[2]} key={crypto.randomUUID()} />)}
