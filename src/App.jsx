@@ -6,7 +6,6 @@ import Dashboard from './pages/Dashboard'
 import Profile from './pages/Profile'
 import AndyProfile from './pages/AndyProfile'
 import Finder from './pages/Finder'
-import AndyProfile from './pages/AndyProfile' 
 import Register from './Register';
 
 function App() {
