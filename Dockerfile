@@ -5,13 +5,20 @@ WORKDIR home/drp57/
 
 RUN apt-get update
 
+COPY package.json .
+COPY vite.config.js .
+COPY .env .env
+
+# backend
+COPY app.js .
+COPY db.js .
+COPY routes/ routes/
+
+# frontend
 RUN mkdir src
 RUN mkdir public
 COPY src/ src/
-COPY package.json .
-COPY vite.config.js .
 COPY index.html .
-COPY app.js .
 
 RUN npm install
 RUN npm run build
