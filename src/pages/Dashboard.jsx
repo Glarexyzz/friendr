@@ -1,5 +1,5 @@
 import '../styles/Dashboard.css';
-import { useNavigate } from 'react-router-dom'; 
+import { Link, useNavigate } from 'react-router-dom'; 
 
 function Dashboard() {
   // Initialize navigate function
@@ -19,6 +19,12 @@ function Dashboard() {
         >
           Make a Connection
         </button>
+      </div>
+
+      <div id='connections'>
+        <Link to='/messaging'>
+          <h3>Message Andy</h3>
+        </Link>
       </div>
     </div>
   );

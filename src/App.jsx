@@ -7,6 +7,7 @@ import Profile from './pages/Profile'
 import AndyProfile from './pages/AndyProfile'
 import Finder from './pages/Finder'
 import Register from './Register';
+import Messaging from './pages/Messaging';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/andy' element={<AndyProfile />} /> 
         <Route path='/finder' element={<Finder />} />
         <Route path='register' element={Register }/>
+        <Route path='/messaging' element={<Messaging />} />
       </Routes>
     </Router>
   )
