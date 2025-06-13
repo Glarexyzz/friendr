@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { profiles } from '../data/profiles.js';
 import atYourUniversity from '../assets/atyouruniversity.jpg';
 import freeToday from '../assets/freetoday.jpg';
 import recentlyActive from '../assets/recentlyactive.jpg';
@@ -12,9 +13,12 @@ function Dashboard() {
     navigate('/finder');
   };
 
-  const handleCategoryClick = (category) => {
-    console.log(`Category selected: ${category}`);
-    // Add navigation or logic for each category if needed
+  const handleCategoryClick = () => {
+    // Temporary logic, just for presenting
+    // Pick a random profile
+    const randomProfile = profiles[Math.floor(Math.random() * profiles.length)];
+    // Navigate using the id we defined
+    navigate(`/profile/${randomProfile.id}`);
   };
 
   return (

@@ -5,7 +5,7 @@ import dislikeIcon from '../assets/dislike.png';   // Import dislike icon
 import '../styles/Profile.css';
 import '../styles/LikeDislike.css';
 
-function AndyProfile() {
+function TaylorProfile() {
   const [liked, setLiked] = useState(false);
   const [disliked, setDisliked] = useState(false);
 
@@ -21,7 +21,7 @@ function AndyProfile() {
 
   return (
     <div className="andy-profile">
-      <h1>Andy's Profile</h1>
+      <h1>Jamie's Profile</h1>
       <div className="profile-container">
         <div className="avatar-container">
           <button 
@@ -52,13 +52,13 @@ function AndyProfile() {
         </div>
         
         <div className="profile-info">
-          <p><span className="label">Name:</span> Andy Smith</p>
-          <p><span className="label">Age:</span> 28</p>
-          <p><span className="label">Interests:</span> Tennis, Coding, Climbing</p>
+          <p><span className="label">Name:</span> Taylor Brown</p>
+          <p><span className="label">Age:</span> 26</p>
+          <p><span className="label">Interests:</span> Cooking, Travel, Movies</p>
         </div>
       </div>
     </div>
   );
 }
 
-export default AndyProfile;
+export default TaylorProfile;
