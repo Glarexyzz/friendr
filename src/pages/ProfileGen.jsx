@@ -1,16 +1,18 @@
-/* Profile template */
+/* Profile Template */
 import { useState, useEffect } from 'react';
 import profileIcon from '../assets/profile.svg';
 import heartIcon from '../assets/heart.png';
 import dislikeIcon from '../assets/dislike.png';
 import { useProfileNavigation } from '../hooks/useProfileNavigation';
+import { useLikedProfiles } from '../contexts/LikedProfilesContext';
 import '../styles/Profile.css';
 import '../styles/LikeDislike.css';
 
-function Profile() {
+function ProfileGen() {
   const [liked, setLiked] = useState(false);
   const [disliked, setDisliked] = useState(false);
   const { getNextProfile, getPreviousProfile, currentProfile } = useProfileNavigation();
+  const { addLikedProfile } = useLikedProfiles();
 
   useEffect(() => {
     // Reset like/dislike states when profile changes
@@ -21,6 +23,8 @@ function Profile() {
   const handleLike = () => {
     setLiked(true);
     setDisliked(false);
+    // Add the current profile to liked profiles
+    addLikedProfile(currentProfile);
   };
 
   const handleDislike = () => {
@@ -61,7 +65,7 @@ function Profile() {
           </button>
         </div>
         
-        <div className="profile-info"> 
+        <div className="profile-info">
           <p><span className="label">Name:</span> {currentProfile.name}</p>
           <p><span className="label">Age:</span> {currentProfile.age}</p>
           <p><span className="label">Interests:</span> {currentProfile.interests}</p>
@@ -83,4 +87,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default ProfileGen;

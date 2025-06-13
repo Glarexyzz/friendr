@@ -1,0 +1,163 @@
+.liked-profiles-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(26, 26, 26);
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.liked-profiles-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.liked-profiles-page h1 {
+  color: rgb(255, 222, 222);
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 222, 222, 0.3);
+}
+
+.empty-state {
+  text-align: center;
+  color: rgba(255, 222, 222, 0.7);
+  font-size: 1.1rem;
+  margin: auto;
+  padding: 40px;
+}
+
+.liked-profiles-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+  width: 100%;
+  justify-items: center;
+}
+
+.liked-profile-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 222, 222, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+}
+
+.liked-profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 222, 222, 0.4);
+}
+
+.profile-avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 222, 222, 0.3);
+  margin-bottom: 15px;
+}
+
+.profile-info {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.profile-info h3 {
+  color: rgb(255, 222, 222);
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.profile-info p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: rgb(200, 200, 200);
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.remove-button {
+  background: #ec2996;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+  border: 1px solid #ec2996;
+}
+
+.remove-button:hover {
+  background: transparent;
+  color: #ec2996;
+}
+
+.view-button {
+  display: inline-block;
+  background: rgba(255, 222, 222, 0.9);
+  color: rgb(45, 45, 45);
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 222, 222, 0.9);
+}
+
+.view-button:hover {
+  background: transparent;
+  color: rgba(255, 222, 222, 0.9);
+}
+
+@media (max-width: 768px) {
+  .liked-profiles-list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .liked-profile-card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .liked-profiles-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .remove-button, .view-button {
+    width: 100%;
+  }
+}
