@@ -61,3 +61,109 @@ label {
   background-color: rgb(45, 45, 45);
   border: 1px solid white;
 }
+
+/* Phone Number Section */
+.phone-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: rgba(255, 222, 222, 0.1);
+  border-radius: 10px;
+}
+
+.section-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(255, 222, 222);
+  margin-bottom: 15px;
+}
+
+.phone-form {
+  display: flex;
+  gap: 10px;
+}
+
+.phone-input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 222, 222);
+  background-color: rgba(45, 45, 45, 0.8);
+  color: white;
+  font-size: 16px;
+}
+
+.link-phone-btn {
+  padding: 12px 20px;
+  background-color: rgb(255, 222, 222);
+  color: rgb(45, 45, 45);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.link-phone-btn:hover {
+  background-color: rgb(255, 200, 200);
+}
+
+/* Permission Popup */
+.permission-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: rgb(45, 45, 45);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  border: 1px solid rgb(255, 222, 222);
+}
+
+.popup-content h3 {
+  color: rgb(255, 222, 222);
+  margin-bottom: 15px;
+}
+
+.popup-content p {
+  color: white;
+  margin-bottom: 25px;
+}
+
+.permission-options {
+  display: flex;
+  gap: 15px;
+}
+
+.permission-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.permission-btn:active {
+  transform: scale(0.98);
+}
+
+.block-btn {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.allow-btn {
+  background-color: #4CAF50;
+  color: white;
+}
