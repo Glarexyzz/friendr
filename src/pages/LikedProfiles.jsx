@@ -4,7 +4,11 @@ import profileIcon from '../assets/profile.svg';
 import '../styles/LikedProfiles.css';
 
 function LikedProfiles() {
-  const { likedProfiles, removeLikedProfile } = useLikedProfiles();
+  const { likedProfiles, friends, removeLikedProfile } = useLikedProfiles();
+
+  const isFriend = (profileId) => {
+    return friends.some(friend => friend.id === profileId);
+  };
 
   return (
     <div className="liked-profiles-page">
@@ -22,6 +26,9 @@ function LikedProfiles() {
                   <h3>{profile.name}</h3>
                   <p>Age: {profile.age}</p>
                   <p>Interests: {profile.interests}</p>
+                  {isFriend(profile.id) && (
+                    <div className="friend-badge">Friend ✓</div>
+                  )}
                 </div>
                 <div className="button-group">
                   <button 
@@ -30,9 +37,15 @@ function LikedProfiles() {
                   >
                     Remove
                   </button>
-                  <Link to={`/profile/${profile.id}`} className="view-button">
-                    View Profile
-                  </Link>
+                  {isFriend(profile.id) ? (
+                    <Link to={`/chat/${profile.id}`} className="view-button">
+                      Chat
+                    </Link>
+                  ) : (
+                    <Link to={`/profile/${profile.id}`} className="view-button">
+                      View Profile
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}

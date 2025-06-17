@@ -26,6 +26,11 @@ function Navigation() {
         <Link to="/profile">
           <img src={profile} className="profile" alt="Your profile" />
         </Link>
+
+        <Link to="/liked-profiles" 
+          className="friends-nav-button logo-style">Friends & Requests
+        </Link>
+
       </div>
     </div>
   );
