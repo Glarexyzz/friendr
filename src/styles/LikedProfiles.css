@@ -8,10 +8,13 @@
 }
 
 .chat-messages {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   overflow-y: auto;
   margin-bottom: 20px;
 }
+
 
 .chat-input {
   display: flex;
@@ -410,22 +413,28 @@
 }
 
 .message {
+  display: inline-block;
   margin-bottom: 15px;
-  max-width: 70%;
   padding: 10px 15px;
   border-radius: 18px;
+  word-break: break-word;
+  max-width: 80%; 
 }
+
 
 .message.me {
   background-color: #ec2996;
   color: white;
+  align-self: flex-end;
   margin-left: auto;
 }
 
 .message.friend {
   background-color: rgb(60, 60, 60);
+  align-self: flex-start;
   margin-right: auto;
 }
+
 
 .message-input-container {
   display: flex;
